@@ -32,7 +32,7 @@ namespace NTO_2024WPF
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            if()
+            
         }
     }
 }
