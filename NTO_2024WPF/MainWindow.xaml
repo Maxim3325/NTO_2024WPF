@@ -9,6 +9,6 @@
     <Grid>
         <Button x:Name="ExitBtn" Content="Выход" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Click="ExitBtn_Click" Background="Red"/>
         <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Right" Margin="0,35,751,0" VerticalAlignment="Top" Width="39" Click="BackBtn_Click"/>
-
+        
     </Grid>
 </Window>

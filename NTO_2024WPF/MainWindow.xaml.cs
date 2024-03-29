@@ -25,24 +25,14 @@ namespace NTO_2024WPF
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if()
         }
     }
 }
