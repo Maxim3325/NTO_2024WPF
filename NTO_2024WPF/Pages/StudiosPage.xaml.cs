@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NTO_2024WPF
+namespace NTO_2024WPF.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для StudiosPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StudiosPage : Page
     {
-        public MainWindow()
+        public StudiosPage()
         {
             InitializeComponent();
-        }
-
-        private void ExitBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
-        {
-           
         }
     }
 }

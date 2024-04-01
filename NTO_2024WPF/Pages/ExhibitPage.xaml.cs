@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NTO_2024WPF
+namespace NTO_2024WPF.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для ExhibitPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ExhibitPage : Page
     {
-        public MainWindow()
+        public ExhibitPage()
         {
             InitializeComponent();
-        }
-
-        private void ExitBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
-        {
-           
         }
     }
 }
