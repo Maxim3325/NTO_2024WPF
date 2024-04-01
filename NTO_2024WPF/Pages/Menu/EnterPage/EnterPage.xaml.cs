@@ -24,5 +24,10 @@ namespace NTO_2024WPF.Pages
         {
             InitializeComponent();
         }
+
+        private void SpacesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SpacesPage());
+        }
     }
 }

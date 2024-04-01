@@ -32,10 +32,10 @@ namespace NTO_2024WPF
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            /*if (NavigationService.GoBack)
+            if (MainFrame.CanGoBack)
             {
-                NavigationService.GoBack();
-            }*/
+                MainFrame.GoBack();
+            }
         }
     }
 }

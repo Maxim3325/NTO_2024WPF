@@ -9,6 +9,6 @@
     <Grid>
         <Button x:Name="ExitBtn" Content="Выход" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ExitBtn_Click" Background="Red" Margin="5"/>
         <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Click="BackBtn_Click" Margin="5, 30"/>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Pages/Menu.xaml"/>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Pages/Menu/Menu.xaml"/>
     </Grid>
 </Window>

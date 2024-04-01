@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="EnterPage">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="SpacesBtn" Content="Пространства" Margin="5" Click="SpacesBtn_Click"/>
+    </StackPanel>
 </Page>
