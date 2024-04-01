@@ -16,29 +16,23 @@ using System.Windows.Shapes;
 namespace NTO_2024WPF.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Menu.xaml
+    /// Логика взаимодействия для EducationPage.xaml
     /// </summary>
-    public partial class Menu : Page
+    public partial class EducationPage : Page
     {
-        public Menu()
+        public EducationPage()
         {
             InitializeComponent();
         }
 
-        private void EnterBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new SpacesPage());
-            
-        }
-
-        private void EducationBtn_Click(object sender, RoutedEventArgs e)
+        private void StudiosBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new StudiosPage());
         }
 
-        private void CultureBtn_Click(object sender, RoutedEventArgs e)
+        private void TeacherBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ExhibitPage());
+            NavigationService.Navigate(new TeacherPage());
         }
     }
 }

@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace NTO_2024WPF.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для EducationPage.xaml
+    /// Логика взаимодействия для EnterPage.xaml
     /// </summary>
-    public partial class EducationPage : Page
+    public partial class EnterPage : Page
     {
-        public EducationPage()
+        public EnterPage()
         {
             InitializeComponent();
-        }
-
-        private void StudiosBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new StudiosPage());
-        }
-
-        private void TeacherBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new TeacherPage());
-            
         }
     }
 }
