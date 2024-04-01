@@ -13,29 +13,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NTO_2024WPF
+namespace NTO_2024WPF.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для EducationPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EducationPage : Page
     {
-        public MainWindow()
+        public EducationPage()
         {
             InitializeComponent();
         }
 
-        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        private void StudiosBtn_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            NavigationService.Navigate(new StudiosPage());
         }
 
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        private void TeacherBtn_Click(object sender, RoutedEventArgs e)
         {
-            /*if (NavigationService.GoBack)
-            {
-                NavigationService.GoBack();
-            }*/
+            NavigationService.Navigate(new TeacherPage());
+            
         }
     }
 }

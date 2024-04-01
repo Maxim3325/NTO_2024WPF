@@ -28,6 +28,7 @@ namespace NTO_2024WPF.Pages
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SpacesPage());
+            
         }
 
         private void EducationBtn_Click(object sender, RoutedEventArgs e)
