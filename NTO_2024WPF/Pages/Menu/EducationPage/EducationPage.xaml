@@ -9,8 +9,8 @@
       Title="EducationPage">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="StudiosBtn" Content="Студии" Click="StudiosBtn_Click" Margin="5" HorizontalContentAlignment="Center"/>
-        <Button x:Name="TeacherBtn" Content="Преподаватели" Margin="5" Click="TeacherBtn_Click" HorizontalContentAlignment="Center"/>
-
+        <Label Content="Образовательная деятельность"/>
+        <Button x:Name="StudiosBtn" Content="Студии" Click="StudiosBtn_Click" Margin="5" HorizontalContentAlignment="Center" Width="100"/>
+        <Button x:Name="TeacherBtn" Content="Преподаватели" Margin="5" Click="TeacherBtn_Click" HorizontalContentAlignment="Center" Width="100"/>
     </StackPanel>
 </Page>

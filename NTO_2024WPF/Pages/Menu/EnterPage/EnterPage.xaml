@@ -9,6 +9,7 @@
       Title="EnterPage">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="SpacesBtn" Content="Пространства" Margin="5" Click="SpacesBtn_Click"/>
+        <Label Content="Развлекательная деятельность"/>
+        <Button x:Name="SpacesBtn" Content="Пространства" Margin="5" Click="SpacesBtn_Click" Width="90"/>
     </StackPanel>
 </Page>

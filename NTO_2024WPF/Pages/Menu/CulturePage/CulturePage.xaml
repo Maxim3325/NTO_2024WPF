@@ -9,6 +9,7 @@
       Title="CulturePage">
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button x:Name="ExhibitBtn" Content="Экспонаты" Click="ExhibitBtn_Click"/>
+        <Label Content="Культурно-просветительская деятельность"/>
+        <Button x:Name="ExhibitBtn" Content="Экспонаты" Click="ExhibitBtn_Click" Width="70"/>
     </StackPanel>
 </Page>
