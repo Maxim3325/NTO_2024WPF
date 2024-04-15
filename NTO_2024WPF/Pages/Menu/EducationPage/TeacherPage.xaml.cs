@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static NTO_2024WPF.Classes.Helper;
 
 namespace NTO_2024WPF.Pages
 {
@@ -23,6 +25,7 @@ namespace NTO_2024WPF.Pages
         public TeacherPage()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
@@ -38,6 +41,16 @@ namespace NTO_2024WPF.Pages
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ImportBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoadData()
+        {
+            Db.Teachers.Load();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace NTO_2024WPF.Pages
         public SpacesPage()
         {
             InitializeComponent();
+
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
@@ -39,5 +40,7 @@ namespace NTO_2024WPF.Pages
         {
 
         }
+
+        
     }
 }

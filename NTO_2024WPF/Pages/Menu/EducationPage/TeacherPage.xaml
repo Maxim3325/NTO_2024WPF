@@ -24,6 +24,7 @@
             <Button x:Name="AddBtn" Click="AddBtn_Click" Content="Добавить" Margin="5"/>
             <Button x:Name="EditBtn" Click="EditBtn_Click" Content="Изменить" Margin="5"/>
             <Button x:Name="DeleteBtn" Click="DeleteBtn_Click" Content="Удалить" Margin="5" Background="Red"/>
+            <Button x:Name="ImportBtn" Click="ImportBtn_Click" Content="Импортировать" Margin="5" Background="Brown"/>
         </StackPanel>
     </Grid>
 </Page>

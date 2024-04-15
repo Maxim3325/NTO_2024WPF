@@ -1,5 +1,11 @@
-﻿using System;
+﻿using ExcelDataReader;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
+using NTO_2024WPF.data;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static NTO_2024WPF.Classes.Helper;
 
 namespace NTO_2024WPF.Pages
 {
@@ -20,9 +27,12 @@ namespace NTO_2024WPF.Pages
     /// </summary>
     public partial class StudiosPage : Page
     {
+        private string file_name;
+
         public StudiosPage()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
@@ -38,6 +48,72 @@ namespace NTO_2024WPF.Pages
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ImportBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog Dio = new OpenFileDialog();
+            Dio.Filter = "*.xls|*.xls";
+            Dio.Multiselect = false;
+            int count_first = 0;
+            if (Dio.ShowDialog() == true)
+            {
+                file_name = Dio.FileName;
+            }
+
+            using (var item = File.Open(file_name, FileMode.Open))
+            {
+                System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+                using (var reader = ExcelReaderFactory.CreateReader(item))
+                {
+                    var result = reader.AsDataSet();
+
+                    foreach (DataRow row in result.Tables[0].Rows)
+                    {
+                        try
+                        {
+                            if (count_first != 0)
+                            {
+                                Db.Studios.Load();
+                                var created_Studios = new Studio();
+
+                                created_Studios.Name = row[0].ToString();
+                                created_Studios.Deskription = row[1].ToString();
+                                var searched_studio = Db.Studios.FirstOrDefault(el => el.Name == created_Studios.Name && el.Deskription == created_Studios.Deskription);
+
+                                if (searched_studio != null)
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    Db.Studios.Add(created_Studios);
+                                    Db.SaveChanges();
+
+                                }
+
+                                LoadData();
+                            }
+                            else
+                            {
+                                count_first++;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Таблица не подходит по формату");
+                        }
+
+                    }
+                }
+            }
+            Db.Studios.Load();
+            StudiosDG.ItemsSource = Db.Studios.ToList();
+        }
+
+        private void LoadData()
+        {
+            Db.Studios.Load();
         }
     }
 }
