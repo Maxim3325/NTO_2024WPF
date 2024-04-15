@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using NTO_2024WPF.data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -100,7 +101,8 @@ namespace NTO_2024WPF.Pages
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Таблица не подходит по формату");
+                            MessageBox.Show("Таблица не подходит по формату", "Ошибка", MessageBoxButton.OK);
+                            break;
                         }
 
                     }

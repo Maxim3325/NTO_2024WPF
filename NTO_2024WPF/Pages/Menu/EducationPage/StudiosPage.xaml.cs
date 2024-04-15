@@ -101,7 +101,8 @@ namespace NTO_2024WPF.Pages
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Таблица не подходит по формату");
+                            MessageBox.Show("Таблица не подходит по формату", "Ошибка", MessageBoxButton.OK);
+                            break;
                         }
 
                     }
