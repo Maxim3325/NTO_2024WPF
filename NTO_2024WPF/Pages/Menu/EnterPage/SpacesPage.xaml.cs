@@ -32,6 +32,7 @@ namespace NTO_2024WPF.Pages
         public SpacesPage()
         {
             InitializeComponent();
+            LoadData();
 
         }
 
